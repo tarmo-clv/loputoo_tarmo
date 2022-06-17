@@ -79,7 +79,6 @@ def computer_button_click(self):
         if not self == 'comp':
             press_order.append(self)
             button_list.remove(self)
-            print('Button nr', self, 'pressed')
         else:
             comp_first = 1
 
@@ -87,7 +86,6 @@ def computer_button_click(self):
             if not len(button_list) == 0:
                 next_click = random.choice(button_list)
                 next_click.event_generate('<Button-1>')
-                print('arvuti Button nr', next_click, 'pressed')
                 button_list.remove(next_click)
                 press_order.append(next_click)
             else:

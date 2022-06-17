@@ -36,10 +36,6 @@ def create_buttons(whos_turn):
         comp_first = 1
 
 
-def restartApp():
-    os.system("python main.py")
-    sys.exit()
-
 def main():
 
     canvas = Canvas(app, width=WIDTH, height=HEIGHT)
@@ -78,16 +74,10 @@ def main():
                     if not x in o_cor:
                         x.configure(state='disable')
             app.unbind('<Button-1>')
-
     app.bind('<Button-1>', test)
-
-    btn = Button(app, text='Click me !', bd='5', command=restartApp)
-    btn.pack()
-
     app.mainloop()
 
 
 if __name__ == '__main__':
-
     main()
 
